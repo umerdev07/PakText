@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'app/paktext_app.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize(); // Initialize AdMob
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  // Initialize Hive
+  await Hive.initFlutter();
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
+  // Open the box
+  await Hive.openBox('historyBox');
 
-class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
-  }
+  runApp(const PaktextApp());
 }
