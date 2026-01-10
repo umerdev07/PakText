@@ -1,5 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-permission android:name="android.permission.CAMERA"/>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.umeryousaf.pak_text">
+<uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -7,7 +8,7 @@
 
 
     <application
-        android:label="paktext"
+        android:label="PakText Scanner"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

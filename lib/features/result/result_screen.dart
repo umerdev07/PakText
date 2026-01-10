@@ -17,7 +17,7 @@ class ResultScreen extends StatelessWidget {
       child: Consumer<ResultProvider>(
         builder: (context, provider, _) {
           return Scaffold(
-            appBar: AppBar(title: Text(AppStrings.appName, style: TextStyle(color: Colors.white),), backgroundColor: AppColors.background,),
+            appBar: AppBar(title: Text('PakText Result', style: TextStyle(color: Colors.white),), backgroundColor: AppColors.background,),
             backgroundColor: AppColors.background,            body: SafeArea(
               child: Padding(
                 padding: const EdgeInsets.all(16),
@@ -76,4 +76,5 @@ class ResultScreen extends StatelessWidget {
       ),
     );
   }
+
 }

@@ -16,10 +16,8 @@ class ResultProvider extends ChangeNotifier {
   Future<void> saveText(BuildContext context) async {
     if (text == null || text!.isEmpty) return;
 
-    // Save OCR text
     await _storageService.saveScan(text!);
 
-    // Increment scan count on HomeProvider
     final homeProvider = Provider.of<Homeprovider>(context, listen: false);
     homeProvider.increment();
   }

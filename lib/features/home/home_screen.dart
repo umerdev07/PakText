@@ -75,13 +75,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          AppStrings.appName,
-          style: const TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
         backgroundColor: AppColors.background,
         centerTitle: true,
         actionsPadding: const EdgeInsets.all(20),
@@ -104,6 +97,13 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Image.asset(
+                    'assets/icons/logo.png',
+                    width: 200,
+                    height: 200,
+                  ),
+                  const SizedBox(height: 5),
+
                   PrimaryButton(
                     text: 'Scan Text',
                     onPressed: () {
@@ -112,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const SizedBox(height: 30),
                   PrimaryButton(
-                    text: 'Scan History (${homeProvider.scanCount})',
+                    text: 'Scan History',
                     onPressed: () {
                       Navigator.pushNamed(context, AppRoutes.history);
                     },
